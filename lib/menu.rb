@@ -8,4 +8,8 @@ class Menu
     @menu = JSON.parse(file)
   end
 
+  def display_menu
+    @menu[0]["prices"][0].each { |key, value| puts "#{key}: #{value}" }
+  end
+
 end
